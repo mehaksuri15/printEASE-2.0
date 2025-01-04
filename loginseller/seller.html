@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login for seller</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: #f4f7fc ;
+            display:flex;
+            align-items :center;
+            justify-content :center;
+        }
+        .container{
+            width: 100px;
+            display: flex;
+            justify-content : center;
+            align-items :center;
+        }
+        .forgot-password {
+            text-align: left;
+            font-size: 14px;
+            display:flex;
+            width: 80%; /* Adjust width */
+            max-width: 300px;
+        }
+        button{
+            background-color : #4CAF50;
+            color:white;
+            border-radius : 4px;
+            cursor: pointer;   
+            align-items:center;
+            display:flex;
+            justify-content: center;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p{
+            text-align : center;
+        }
+        a {
+            color: #4CAF50;
+           
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class ="container">
+        <div class="form-container">
+            <h2 class="title">Seller Login</h2>
+            <form id="loginForm">
+                
+                <input type="id" id="id" placeholder="Enter your id" required>
+                <input type="pass" id="pass" placeholder="Enter your password" required>
+               
+
+                <span id="idError" class="error"></span>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href ="#">Sign up</a></p>
+        </div>
+    </div>
+    <script>
+        const loginForm=document.getElementById('loginForm')
+        const IdInput = document.getElementById('id');
+        const passwordInput = document.getElementById('password');
+        const IdError = document.getElementById('IdError');
+        const passwordError = document.getElementById('passwordError');
+
+        loginForm.addEventListener('submit',function(event){
+            let isValid=true;
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            if(!emailInput.validity.valid){
+                emailError.textContent = 'please enter a valid email address';
+                isvalid=false;
+            }
+            const passwordValue = passwordInput.value;
+            if (passwordValue.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+            if (!isValid) {
+                event.preventDefault(); // Stop form submission
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
