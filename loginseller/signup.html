@@ -35,11 +35,72 @@
             <p id="confirmPasswordError" class="error-message">Passwords do not match.</p>
 
             <button type="submit">Create Account</button>
+
         </form>
+
+        <p class="sign-in-link">Already have an account? <a href="/login">Sign In</a></p>
+
     </div>
+    <script src="script.js"></script>
     
     <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f4f8;
+        }
+        .form-container{
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        label {
+             display: block;
+             font-size: 14px;
+             text-align:left;
+             color: #555;
+        }
+        button{
+            color:white;
+            cursor:pointer;
+            border-radius:4px;
+            border:none;
+            background-color:#007bff;
+        }
+        button:hover {
+         background-color: #0056b3;
+        }
+        .sign-in-link {
+        font-size: 14px;
+        color: #777;
+        }
 
+        .sign-in-link a {
+        color: #007bff;
+        text-decoration: none;
+         }
+
+        .sign-in-link a:hover {
+            text-decoration: underline;
+        }
         </style>
+
+<script>
+    const form= document.getElementById('sellerform');
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const businessName = document.getElementById('businessName').value;
+    const location = document.getElementById('location').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+</script>
 </body>
 </html>
